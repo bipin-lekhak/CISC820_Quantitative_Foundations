@@ -5,13 +5,13 @@ y = ensureVectorLength(y); % length(y) == [n, 1] Stacked vertically
 z; % length(z) == [p,n] Stacked horizontally
 
 
-s = z * y % length(s) == [p, 1]
+s = z * y; % length(s) == [p, 1]
 
-M = z * z' % [p, p]
+M = z * z'; % [p, p]
 
-w_vec = GaussianElimination(M, s) % [p, 1]
+w_vec = pinv(M)*s;  % [p, 1]
 
 
-R = norm((w_vec' * z) - y')^2
+R = norm((w_vec' * z) - y')^2;
 
 end
