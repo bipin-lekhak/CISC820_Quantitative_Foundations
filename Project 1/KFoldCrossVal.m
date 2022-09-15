@@ -18,8 +18,8 @@ for k = 1:K
 
     [w_vec, t_error] = LeastSquareBasis(train_Z, train_y');
 
-    errors(k) = norm(w_vec' * test_Z - test_y)^2 / N;
-    t_errors(k) = t_error / N;
+    errors(k) = norm(w_vec' * test_Z - test_y)^2 / chunk_size;
+    t_errors(k) = t_error / (N-chunk_size);
 
 end
 
