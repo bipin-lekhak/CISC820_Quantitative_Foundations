@@ -9,11 +9,11 @@ elseif check_num == 2 % "Beta(20000,1)"
 elseif check_num == 3 % "Beta(1,20000)"
     act_mu = 1 / (20000 + 1);
     sampler = @(x) betarnd(1, 20000, x, 1);
-elseif check_num == 4 % "Bern(0.99999)"
-    act_mu = 0.99999;
+elseif check_num == 4 % "Bern(0.9999)"
+    act_mu = 0.9999;
     sampler = @(x) sample_bernoulli(x, act_mu);
-elseif check_num == 5 % "Bern(0.00001)"
-    act_mu = 0.00001;
+elseif check_num == 5 % "Bern(0.0001)"
+    act_mu = 0.0001;
     sampler = @(x) sample_bernoulli(x, act_mu);
 elseif check_num == 6 % "U(0, 0.001)"
     act_mu = (0.001 + 0)/2;
