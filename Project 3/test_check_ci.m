@@ -2,7 +2,7 @@ function test_check_ci(func_num, varargin)
 
 if nargin == 2
     fname = varargin{1} + "_" + string(func_num) +".txt";
-    fid = fopen(fname, "a");
+    fid = fopen(fname, "w");
 else
     fid = 1;
 end
