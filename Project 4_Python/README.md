@@ -18,7 +18,7 @@ Files needed:
 
 4. Attention
 
-* Both the eigenvalues and eigenvectors will be produced and saved automatically to the `./eigen.npy` at the frist launching. This will take around 10mins.
+* Both the eigenvalues and eigenvectors will be produced and saved automatically to the `./eigen.npy` at the frist launching. This will take around 10mins, the `eigen.npy` takes around 1.7Gb.
 * For the time efficiency, please run the follwoing code after the eigenvector producing part. 
 * By default, 99% of the energy is kept for the following part (curve, visualization), which corresponds to 324 components. 
 * We randomly choose the `subset_img_num` out of 400 images no matter of the class. Each time the chosen images differs due to the unfixed seed. 
