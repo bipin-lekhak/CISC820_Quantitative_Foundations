@@ -2,10 +2,11 @@
 
 % grad_y = [2, 20]' .* x
 
-x = [.5, .5]';
+x = [2, 1]';
 
-h = 1;
-get_gradient(@test_func_2, x, h, 4)
+h = .1;
+grad = get_gradient(@test_func_2, x, h, 4);
+hess = get_hessian(@test_func_2, x, h);
 
 test_grad_func_2(x)
 

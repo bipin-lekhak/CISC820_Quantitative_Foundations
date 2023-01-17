@@ -5,10 +5,10 @@ xp1 = x + 1 .* h .* eye(length(x));
 xm2 = x - 2 .* h .* eye(length(x));
 xm1 = x - 1 .* h .* eye(length(x));
 
-xp2_cell = num2cell(xp2, 2);
-xp1_cell = num2cell(xp1, 2);
-xm2_cell = num2cell(xm2, 2);
-xm1_cell = num2cell(xm1, 2);
+xp2_cell = num2cell(xp2, 1);
+xp1_cell = num2cell(xp1, 1);
+xm2_cell = num2cell(xm2, 1);
+xm1_cell = num2cell(xm1, 1);
 
 fxp2h = cellfun(func, xp2_cell);
 fxp1h = cellfun(func, xp1_cell);
